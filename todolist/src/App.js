@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div>
-      <h1>My ToDos({toDos.length})</h1>
+      <h1>✨My ToDo List({toDos.length})</h1>
       <form onSubmit={onSubmit}>
         <input
           onChange={onChange}
@@ -27,6 +27,12 @@ function App() {
         />
         <button>Add To Do</button>
       </form>
+      <hr />
+      <ul>
+        {toDos.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
